@@ -6,7 +6,7 @@
 /*   By: magrab <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 18:28:44 by magrab            #+#    #+#             */
-/*   Updated: 2018/11/19 18:28:47 by magrab           ###   ########.fr       */
+/*   Updated: 2018/12/22 15:38:23 by magrab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int				get_next_line(const int fd, char **line)
 	static char	*tabfd[MAX_FD];
 	int			xread;
 
-	if (fd < 0 || fd >= MAX_FD || line == NULL)
+	if (fd < 0 || fd >= MAX_FD || line == NULL || BUFF_SIZE < 1)
 		return (-1);
 	xread = BUFF_SIZE;
 	if (tabfd[fd] == NULL)
