@@ -6,7 +6,7 @@
 /*   By: magrab <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 18:25:38 by magrab            #+#    #+#             */
-/*   Updated: 2018/11/19 18:26:48 by magrab           ###   ########.fr       */
+/*   Updated: 2018/12/22 15:51:49 by magrab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
 # include "libft/libft.h"
 
 # define BUFF_SIZE 42

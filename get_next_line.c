@@ -6,7 +6,7 @@
 /*   By: magrab <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 18:28:44 by magrab            #+#    #+#             */
-/*   Updated: 2018/12/22 15:38:23 by magrab           ###   ########.fr       */
+/*   Updated: 2018/12/22 15:53:03 by magrab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 ** Use only if \n inside tabfd
 */
 
-static int		isinbuffer(const int fd, char **line, char *tabfd[MAX_FD])
+static int		isinbuffer(const int fd, char **line, char *tabfd[OPEN_MAX])
 {
 	int		npos;
 	char	*tmp;
@@ -37,7 +37,7 @@ static int		isinbuffer(const int fd, char **line, char *tabfd[MAX_FD])
 	return (1);
 }
 
-static int		gnl(const int fd, char **line, int xread, char *tabfd[MAX_FD])
+static int		gnl(const int fd, char **line, int xread, char *tabfd[OPEN_MAX])
 {
 	char		reader[BUFF_SIZE + 1];
 	char		*save;
@@ -63,10 +63,10 @@ static int		gnl(const int fd, char **line, int xread, char *tabfd[MAX_FD])
 
 int				get_next_line(const int fd, char **line)
 {
-	static char	*tabfd[MAX_FD];
+	static char	*tabfd[OPEN_MAX];
 	int			xread;
 
-	if (fd < 0 || fd >= MAX_FD || line == NULL || BUFF_SIZE < 1)
+	if (fd < 0 || fd >= OPEN_MAX || line == NULL || BUFF_SIZE < 1)
 		return (-1);
 	xread = BUFF_SIZE;
 	if (tabfd[fd] == NULL)
