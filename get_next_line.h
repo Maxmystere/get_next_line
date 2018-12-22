@@ -6,7 +6,7 @@
 /*   By: magrab <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 18:25:38 by magrab            #+#    #+#             */
-/*   Updated: 2018/12/22 15:51:49 by magrab           ###   ########.fr       */
+/*   Updated: 2018/12/22 15:54:47 by magrab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 # include "libft/libft.h"
 
 # define BUFF_SIZE 42
-# define MAX_FD 1023
 
 int		get_next_line(const int fd, char **line);
 
